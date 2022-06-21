@@ -1,0 +1,92 @@
+/* CSS Document */
+html{
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	background-size:100% 100%;
+	-moz-background-size:100% 100%;
+	background-image:url("背景图.jpg")
+	}
+
+body {
+				margin: 0;
+				padding: 0;
+				background:transparent;
+				display: flex;
+				justify-content: center;
+			}
+			.menu {
+				margin: 0;
+				padding: 0;
+				margin-top: 10px;
+			}
+			.menu li {
+				list-style: none;
+				display: inline-block;
+			}
+			.menu li a {
+				text-decoration: none;
+				position: relative;
+				color: #313131;
+				font-size: 20px;
+				font-weight: 500;
+				font-family: sans-serif;
+				display: block;
+				overflow: hidden;
+				transition: 0.7s all;
+				padding: 14px 5px;
+				text-transform: uppercase;
+			}
+			.menu li a:before {
+				content: '';
+				width: 25px;
+				position: absolute;
+				border-bottom: 2px solid #313131;
+				bottom: 0;
+				right: 350px;
+				transition: 0.7s all;
+			}
+			.menu li a:hover:before {
+				right: 0;
+			}
+
+.top button {
+	height: 50px;
+	padding-left: 35px;
+	padding-right: 35px;	
+	margin-top: 10px;
+	margin-right: 10px;
+	float: right;
+	border:none;
+	border-radius: 20px;
+	outline: none;
+	background-color: #ffffff80;
+	color:#222222;	
+            }
+
+.main input{
+	height:50px;
+	border:none;
+	border-radius: 25px;
+	outline: none;
+	position:absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	background-color: white;
+}
+
+.main #content {
+	width: 570px;
+	padding-left: 22px;
+	padding-right: 62px;
+	box-shadow: 0 0 10px #00000030;
+	color: gray;
+}
+
+.main #search {
+	width:50px;
+	margin-left: 290px;
+	color:#454545;
+	font-weight: bold;
+}
