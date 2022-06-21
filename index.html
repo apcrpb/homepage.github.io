@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="cmn-hans">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="九洲起始页,开始,起始页,主页,导航" />
+    <meta name="description" content="一款方便美观简洁的起始页。" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src 'none'; base-uri 'none'; connect-src https:; font-src https://at.alicdn.com https://cdn.sencdn.com; form-action https://*.baidu.com https://www.bing.com https://www.google.com https://duckduckgo.com https://yandex.com; frame-src 'self' https://account.rthsoftware.cn; img-src https://cdn.jsdelivr.net 'self' data: https:; script-src 'self' 'unsafe-eval' 'unsafe-inline' https://cdn.jsdelivr.net https://cdn.sencdn.com https://widget.seniverse.com; style-src 'self' 'unsafe-inline'; media-src https://cdn.jsdelivr.net 'self'">
+    <title>ACPC CRPB HPG九洲起始页</title>
+    <link rel="stylesheet" href="styles/waves.min.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="canonical" href="index.html">
+    <link rel="shortcut icon"  href="assets/images/CRPB.ico"/>
+</head>
+
+<body>
+    <div id="bodyBox">
+        <form id="form0" target="_blank">
+            <video id="liveBgBox" autoplay="true" loop="true" muted="true"></video>
+            <input type="text" class="input ypoctonod" id="input0" name="word" size="30" placeholder="点此处开始搜索(〃'▽'〃)"
+                autocomplete="off">
+            <img class="bgbox" id="bgbox">
+            <div class="cover" id="cover" onclick="Input_Blur()"></div>
+            <input type="submit" class="btn_search" value="Search">
+        </form>
+        <div id="searchOptBox">
+            <span class="searchOpt" id="searchOpt1" onclick="switchSearchEng('baidu')"><i class="iconfont"
+                    id="iconBaidu">&#xe651;</i></span><span class="searchOpt" id="searchOpt2"
+                onclick="switchSearchEng('bing')"><i class="iconfont" id="iconBing">&#xe608;</i></span><span
+                class="searchOpt" id="searchOpt3" onclick="switchSearchEng('google')"><i class="iconfont"
+                    id="iconGoogle">&#xe624;</i></span><span class="searchOpt" id="searchOpt4"
+                onclick="switchSearchEng('duckduckgo')"><i class="iconfont" id="iconDuckduckgo">&#xe602;</i></span><span class="searchOpt" id="searchOpt5"
+                onclick="switchSearchEng('yandex')"><i class="iconfont" id="iconYandex">&#xe603;</i></span>
+        </div>
+        <div class="keyword" id="keyword"></div>
+        <div class="quotebox waves-effect waves-light" id="quotebox">
+            <span class="quote-bg"></span>
+            <p class="quote-content"></p>
+            <p class="quote-author"></p>
+        </div>
+        <div class="navbox" id="navbox">
+            <div class="navbox0" id="navbox0">
+                <div class="navboxes" id="navbox1">
+                    <div class="navLinkBox" id="navLinkBox">
+                        <span class="navLinkBoxItem"><a href="https://fanyi.baidu.com/" target="_blank"
+                                class="nav_links" id="navlinkTranslate"><i class="iconfont iconNavLinks">&#xe8f6;</i>翻译</a></span>
+                        <span class="navLinkBoxItem"><a href="https://map.baidu.com/" target="_blank" class="nav_links"
+                                id="navlinkMap"><i class="iconfont iconNavLinks">&#xe7e1;</i>地图</a></span>
+                        <span class="navLinkBoxItem"><a href="https://image.baidu.com/" target="_blank"
+                                class="nav_links" id="navlinkImage"><i class="iconfont iconNavLinks">&#xe7ac;</i>图片</a></span>
+                        <span class="navLinkBoxItem"><a href="https://mail.qq.com/" target="_blank" class="nav_links"><i
+                                    class="iconfont iconNavLinks">&#xe712;</i>QQ邮箱</a></span>
+                        <span class="navLinkBoxItem"><a href="https://email.163.com/" target="_blank"
+                                class="nav_links"><i class="iconfont iconNavLinks">&#xe712;</i>网易邮箱</a></span>
+                        <span class="navLinkBoxItem"><a href="https://github.com/" target="_blank" class="nav_links"><i
+                                    class="iconfont iconNavLinks">&#xe780;</i>GitHub</a></span>
+                        <span class="navLinkBoxItem"><a href="https://tieba.baidu.com/" target="_blank"
+                                class="nav_links"><i class="iconfont iconNavLinks">&#xe774;</i>贴吧</a></span>
+                        <span class="navLinkBoxItem"><a href="https://www.bilibili.com/" target="_blank"
+                                class="nav_links"><i class="iconfont iconNavLinks">&#xe948;</i>Bilibili</a></span>
+                        <span class="navLinkBoxItem"><a href="https://www.youku.com/" target="_blank"
+                                class="nav_links"><i class="iconfont iconNavLinks">&#xe948;</i>优酷</a></span>
+                        <span class="navLinkBoxItem"><a href="https://music.163.com/" target="_blank"
+                                class="nav_links"><i class="iconfont iconNavLinks">&#xe804;</i>云音乐</a></span>
+                        <span class="navLinkBoxItem"><a href="https://www.jd.com/" target="_blank" class="nav_links"><i
+                                    class="iconfont iconNavLinks">&#xe89d;</i>京东</a></span>
+                        <span class="navLinkBoxItem"><a href="https://www.taobao.com/" target="_blank"
+                                class="nav_links"><i class="iconfont iconNavLinks">&#xe89d;</i>淘宝</a></span>
+                        <span class="navLinkBoxItem"><a href="https://www.tmall.com/" target="_blank"
+                                class="nav_links"><i class="iconfont iconNavLinks">&#xe89d;</i>天猫</a></span>
+                        <span class="navLinkBoxItem"><a href="https://airportal.cn/" target="_blank"
+                                class="nav_links"><i class="iconfont iconNavLinks">&#xe6b9;</i>空投</a></span>
+                        <span class="navLinkBoxItem"><a href="https://pan.baidu.com/" target="_blank"
+                                class="nav_links"><i class="iconfont iconNavLinks">&#xe6b9;</i>网盘</a></span>
+						<span class="navLinkBoxItem"><a href="http://acpccrpb.mysxl.cn/" target="_blank"
+                                class="nav_links"><i class="iconfont iconNavLinks">&#xe774;</i>我们的官网</a></span>
+						<span class="navLinkBoxItem"><a href="Home/index.html" target="_blank"
+                                class="nav_links"><i class="iconfont iconNavLinks">&#xe6b9;</i>更多导航</a></span>
+						<span class="navLinkBoxItem"><a href="CRPB/index.html" target="_blank"
+                                class="nav_links"><i class="iconfont iconNavLinks">&#xe774;</i>我的个人主页</a></span>
+						<span class="navLinkBoxItem"><a href="beta2.0/index.html" target="_blank"
+                                class="nav_links"><i class="iconfont iconNavLinks">&#xe6b9;</i>Beta2.0</a></span>
+                    </div>
+                </div>
+            </div>
+            <div id="navboxCustom">
+            </div>
+        </div>
+        <div class="title" id="title">
+            <h1 id="titleText">欢迎</h1>
+        </div>
+        <span id="btnWarn"><i class="iconfont">&#xe6e1;</i></span>
+        <span id="btnSettings" title="设置" onclick="btnSettingsClick()"><i class="iconfont">&#xe673;</i></span>
+        <div id="tipBoxBrowser">
+            <div class="titleBold">您的浏览器内核版本较低</div>
+            <div class="pTip">起始页的部分功能及UI特性只有新一代浏览器内核才能完美运行及渲染。</div>
+            <div class="pTip">建议您更换至最新的<a href="https://www.google.cn/chrome/" target="_blank" class="links1"> Google
+                    Chrome 浏览器 </a>或全新<a href="https://www.microsoft.com/zh-cn/edge/" target="_blank" class="links1">
+                    Chromium 版 Microsoft Edge 浏览器 </a></div>
+        </div>
+        <!--用于解决弹出菜单无法收回的问题，原理不明。-->
+        <div id="menuUser"></div>
+        <!---->
+        <div id="menuSettings">
+            <div class="userMenuItem" id="setMenuGeneral" onclick="showPop(popGeneralSettings)">高级设置</div>
+            <div class="userMenuItem" id="setMenuSearchEngPref" onclick="showPop(popSearchEng)">搜索引擎偏好</div>
+            <div class="userMenuItem" id="setMenuBgPref" onclick="showPop(popBg)">背景偏好</div>
+            <div class="userMenuItem" id="setMenuDonate" onclick="showPop(popDonate)">捐助我</div>
+            <div class="userMenuItem" id="setMenuFeedback" onclick="showPop(popFeedback)">常规问题</div>
+			<div class="userMenuItem" id="setMenuacc" onclick="showPop(popaac)">法律信息</div>
+        </div>
+        <span id="btnLike" onclick="likeClick()" onmouseenter="showMenu(wallpaperInfo)"
+            onmouseleave="hideMenu(wallpaperInfo)"><i class="iconfont">&#xe64f;</i>&nbsp;<span
+                id="numLiked"><a href="oldwww/index.html" title="喜欢旧版起始页？那就点这吧！" target="_blank"
+                                 class="links">返回旧版</a></span></span>
+        <div id="wallpaperInfo"></div>
+        <div id="pinnedBox">
+
+        </div>
+        <div id="greetingBox"><span id="greeting">欢迎回来~</span></div>
+        <footer>
+            <span id="footerBox"><a href="http://acpccrpb.mysxl.cn/" title="前往我的首页" target="_blank"
+                    class="links">&copy 九洲联合开发组工作室</a> | <a title="查看最新的「九洲起始页」更新日志与起始页版本" class="links"
+                    onclick="showAbout()">版本与更新日志</a></span>
+        </footer>
+        <div class="cover1" id="cover1">
+            <div class="popUp" id="popGeneralSettings">
+                <span class="btnClose" onclick="closePop(popGeneralSettings)"><span class="btnCloseInner"></span></span>
+                <div class="pTitle">高级设置</div>
+                <div class="pContent" id="contentGSet">
+                    <div class="titleBold setGroupCaption">搜索设置</div>
+                    <div class="setGroup">
+                        <div class="setOptBox">
+                            <span class="setOptCaption">自动清空搜索栏</span>
+                            <label class="switch"><input type="checkbox" id="chkAutoClrSearchBar">
+                                <div class="slider" onclick="setAutoClrSearchBar()"></div>
+                            </label>
+                        </div>
+                        <div class="setOptBox">
+                            <span class="setOptCaption">在新标签页显示搜索结果</span>
+                            <label class="switch"><input type="checkbox" id="chkOpenInNew">
+                                <div class="slider" onclick="setOpenInNew()"></div>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="titleBold setGroupCaption">初始化</div>
+                    <div class="setGroup">
+                        <div class="setOptBox">
+                            <span class="setOptCaption">起始页加载时自动聚焦到搜索栏</span>
+                            <label class="switch"><input type="checkbox" id="chkAutoFocus">
+                                <div class="slider" onclick="setAutoFocus()"></div>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="titleBold setGroupCaption">页面显示与性能</div>
+                    <div class="setGroup">
+                        <div class="setOptBox">
+                            <span class="setOptCaption">减弱动态效果</span>
+                            <label class="switch"><input type="checkbox" id="chkReduceMotion">
+                                <div class="slider" onclick="setReduceMotion()"></div>
+                            </label>
+                            <span class="setOptComment">动效显示不流畅或影响你的鼠标操作时，可以开启此项。</span>
+                        </div>
+                        <div class="setOptBox">
+                            <span class="setOptCaption">为网站捷径栏应用毛玻璃效果</span>
+                            <label class="switch"><input type="checkbox" id="chkNavLinksBlurEf">
+                                <div class="slider" onclick="setNavLinksBlurEf()"></div>
+                            </label>
+                            <span class="setOptComment">开启后可能会影响部分计算机的性能。</span>
+                        </div>
+                    </div>
+                    <div class="titleBold setGroupCaption">通用</div>
+                    <div class="setGroup">
+                        <div class="setOptBox">
+                            <span class="setOptCaption" style="margin-left: -6px;">「一言」功能</span>
+                            <label class="switch"><input type="checkbox" id="chkHitokoto">
+                                <div class="slider" onclick="setHitokoto()"></div>
+                            </label>
+                        </div>
+                        <div class="setOptBox">
+                            <span class="setOptCaption">自动切换深色主题</span>
+                            <label class="switch"><input type="checkbox" id="chkAutoDarkMode">
+                                <div class="slider" onclick="setAutoDarkMode()"></div>
+                            </label>
+                            <span class="setOptComment">开启后，若浏览器或操作系统的深色模式开启，起始页也会切换<br>到深色主题。</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="popUp" id="popSearchEng">
+				<span class="btnClose" onclick="closePop(popSearchEng)"><span class="btnCloseInner"></span></span>
+				<div class="pTitle">搜索引擎偏好</div>
+				<div class="pContent" id="contentSearchEng">
+					<div class="titleBold">主搜索引擎</div>
+					<div class="searchEngList">
+						<div class="searchEngListItem">
+							<input type="radio" name="radioSearchEng" id="baiduRadioSearchEng">
+							<div class="searchEngName">百度<span class="searchEngUrl" id="baiduSearchEngUrl">https://www.baidu.com/s?ie=utf-8&amp;word=</span></div>
+						</div>
+						<div class="searchEngListItem">
+							<input type="radio" name="radioSearchEng" id="bingRadioSearchEng">
+							<div class="searchEngName">必应<span class="searchEngUrl" id="bingSearchEngUrl">https://cn.bing.com/search?q=</span></div>
+						</div>
+						<div class="searchEngListItem">
+							<input type="radio" name="radioSearchEng" id="googleRadioSearchEng">
+							<div class="searchEngName">谷歌<span class="searchEngUrl" id="googleSearchEngUrl">https://www.google.com/search?q=</span></div>
+                        </div>
+                        <div class="searchEngListItem">
+							<input type="radio" name="radioSearchEng" id="duckduckgoRadioSearchEng">
+							<div class="searchEngName">DuckDuckGo<span class="searchEngUrl" id="duckduckgoSearchEngUrl">https://duckduckgo.com/?q=</span></div>
+						</div>
+					</div>
+					<div class="titleBold">次搜索引擎</div>
+					<div class="searchEngList">
+						<div class="searchEngListItem">
+							<input type="radio" name="radioSearchEng" id="magiRadioSearchEng">
+							<div class="searchEngName">Magi<span class="searchEngUrl" id="magiSearchEngUrl">https://magi.com/search?q=</span></div>
+						</div>
+						<div class="searchEngListItem">
+							<input type="radio" name="radioSearchEng" id="mijiRadioSearchEng">
+							<div class="searchEngName">秘迹搜索<span class="searchEngUrl" id="mijiSearchEngUrl">https://mijisou.com/?q=</span></div>
+						</div>
+						<div class="searchEngListItem">
+							<input type="radio" name="radioSearchEng" id="sogouRadioSearchEng">
+							<div class="searchEngName">搜狗搜索<span class="searchEngUrl" id="sogouSearchEngUrl">https://www.sogou.com/web?query=</span></div>
+						</div>
+						<div class="searchEngListItem">
+							<input type="radio" name="radioSearchEng" id="qihooRadioSearchEng">
+							<div class="searchEngName">360搜索<span class="searchEngUrl" id="qihooSearchEngUrl">https://www.so.com/s?q=</span></div>
+						</div>
+					</div>
+					<div class="titleBold">自定搜索引擎</div>
+					<div class="pTitleS">在下方键入您自定义搜索引擎的URL。以 https:// 开头，关键词参数名及其连接符结尾。</div>
+					<div class="searchEngList">
+						<div class="searchEngListItem">
+							<input type="radio" name="radioSearchEng" id="customRadioSearchEng">
+							<div class="searchEngName">自定义<input type="text" id="inputCusSearchEngUrl" placeholder="在此键入搜索引擎URL"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+            <div class="popUp" id="popBg">
+                <span class="btnClose" onclick="closePop(popBg)"><span class="btnCloseInner"></span></span>
+                <div class="pTitle">设置背景</div>
+                <div class="pContent" id="contentBg">
+                    <div class="pTitleS">自定义</div>
+                    <div class="bgPreviewBox" id="bgPreBoxCus" onclick="changeWp(this)">
+                        <div class="bgPreBoxInner unset" id="bgPreBoxInCus"><span class="bgPreBoxMask"></span><i
+                                class="iconfont iconCheck shouldNotFade">&#xe622;</i><i
+                                class="iconfont iconImg shouldNotFade">&#xeb9a;</i></div>
+                    </div>
+                    <div class="bgCusBoxR">
+                        <span class="titleBold">将您喜爱的任意图像设为壁纸。</span>
+                        <div class="pTitleS" id="pCusBgSuggestion">建议图像尺寸：1920×1080 或更高</div><br>
+                        <button class="btnRectangle" id="btnBrowse">浏览...</button>
+                        <input id="inputImg" type="file" accept="image/*">
+                    </div>
+                    <div class="pTitleS">默认</div>
+                    <div class="bgPreviewBox" id="bgPreBoxD1" onclick="changeWp(this)"
+                        title="东库特尼的埃尔克河，加拿大不列颠哥伦比亚省 (© Carson Ganci / First Light / age fotostock)">
+                        <div class="bgPreBoxInner" id="bgPreBoxIn1"><span class="bgPreBoxMask"></span><i
+                                class="iconfont iconCheck shouldNotFade">&#xe622;</i></div>
+                    </div>
+                    <div class="bgPreviewBox" id="bgPreBoxD2" onclick="changeWp(this)"
+                        title="瓦尔内明德的灯塔，德国梅克伦堡-前波美拉尼亚州罗斯托克市 (© Sandra Kreuzinger / Moment Open / Getty Images)">
+                        <div class="bgPreBoxInner" id="bgPreBoxIn2"><span class="bgPreBoxMask"></span><i
+                                class="iconfont iconCheck shouldNotFade">&#xe622;</i></div>
+                    </div>
+                    <div class="bgPreviewBox" id="bgPreBoxD3" onclick="changeWp(this)"
+                        title="孚日山脉的针叶林，法国 (© Radomir Jakubowski / Minden Pictures)">
+                        <div class="bgPreBoxInner" id="bgPreBoxIn3"><span class="bgPreBoxMask"></span><i
+                                class="iconfont iconCheck shouldNotFade">&#xe622;</i></div>
+                    </div>
+                    <div class="bgPreviewBox" id="bgPreBoxD4" onclick="changeWp(this)"
+                        title="Bents的旧百货商店，加拿大萨斯喀彻温省 (© ImagineGolf/Getty Images)">
+                        <div class="bgPreBoxInner" id="bgPreBoxIn4"><span class="bgPreBoxMask"></span><i
+                                class="iconfont iconCheck shouldNotFade">&#xe622;</i></div>
+                    </div>
+                    <div class="pTitleS">历代壁纸</div>
+                    <div class="bgPreviewBox" id="bgPreBoxD5" onclick="changeWp(this)"
+                        title="Beta1.0背景图，还原经典 (© 九之洲联合开发组工作室)本壁纸来源自网络版权非属于本工作室">
+                        <div class="bgPreBoxInner" id="bgPreBoxIn5"><span class="bgPreBoxMask"></span><i
+                                class="iconfont iconCheck shouldNotFade">&#xe622;</i></div>
+                    </div>
+                    <div class="bgPreviewBox" id="bgPreBoxD6" onclick="changeWp(this)"
+                        title="Beta2.0背景图，还原经典 (© 九之洲联合开发组工作室)本壁纸来源自网络版权非属于本工作室">
+                        <div class="bgPreBoxInner" id="bgPreBoxIn6"><span class="bgPreBoxMask"></span><i
+                                class="iconfont iconCheck shouldNotFade">&#xe622;</i></div>
+                    </div>
+                    <div class="pTitleS">必应</div>
+                    <div class="bgPreviewBox" id="bgPreBoxBing" onclick="changeWp(this)"
+                        title="来自必应主页每日壁纸">
+                        <div class="bgPreBoxInner" id="bgPreBoxInBing"><span class="bgPreBoxMask"></span><i
+                                class="iconfont iconCheck shouldNotFade">&#xe622;</i></div>
+                    </div>
+                    <div class="pTitleS" id="bgTitleDynamic">动态</div>
+                    <div class="bgPreviewBox" id="bgPreBoxLive" onclick="changeWp(this)"
+                        title="Old bridge (© Arseniy Chebynkin / DerDenniis / Wallpaper Engine)">
+                        <div class="bgPreBoxInner" id="bgPreBoxInLive"><span class="bgPreBoxMask"></span><i
+                                class="iconfont iconCheck shouldNotFade">&#xe622;</i></div>
+                    </div>
+                </div>
+            </div>
+            <div class="popUp" id="popAbout">
+                <span class="btnClose" onclick="closePop(popAbout)"><span class="btnCloseInner"></span></span>
+                <div class="aboutLogo"></div>
+                <div class="pContent centerAligned">
+                    <p id="pVersion">version</p>
+                    <p class="pAbout">这里是的九洲起始页(〃'▽'〃)<br>如果你喜欢这个主页，可以<a
+                            onclick="closePop(popAbout); setTimeout(() => showPop(popDonate), 400)"
+                            class="links1">赞助我们</a>。Have a lucky day!<br><a href="oldwww/index.html" class="links1">什么不喜欢我们最新版的起始页？点击这里返回初代起始页！</a><br><a href="beta2.0/index.html" class="links1">（点击这里返回到Beta2.0起始页）</a>
+                    </p>
+                    <div id="changeLog"></div>
+                </div>
+            </div>
+
+            <div class="popUp" id="popFeedback">
+                <span class="btnClose" onclick="closePop(popFeedback)"><span class="btnCloseInner"></span></span>
+                <div class="pTitle">常规问题</div>
+                <div class="pContent" id="contentFeedback">
+                    <p class="pAbout">如有重大问题或其他问题，请直接用邮件发送至:dd123456hj@outlook.com<br>常规问题建议先阅读下方文本再进行提交!
+                    </p>
+                    <div class="feedbackItem"><span class="titleBold">为什么按下回车无法搜索/同时打开两次搜索结果？</span>
+                        <div class="pTitleS">1. 可能是你安装的浏览器扩展冲突了，可以把扩展都关掉逐个排查； 2. 可能是你的浏览器没有开启“允许弹出窗口”权限，打开就行啦。</div>
+                    </div>
+                    <div class="feedbackItem"><span class="titleBold">为什么搜索栏会鬼畜/按下回车搜索打开的是空白页？</span>
+                        <div class="pTitleS">你的浏览器内核版本过低，建议换到最新版本的Chrome浏览器或Chromium内核的Edge浏览器就可以啦。</div>
+                    </div>
+                    <div class="feedbackItem"><span class="titleBold">界面的一些元素把其它元素挡住了点不到？</span>
+                        <div class="pTitleS">因为我还没有完全做好小窗口/手机屏幕的界面适配，我会尽快做好的。</div>
+                    </div>
+                    <div class="feedbackItem"><span class="titleBold">界面动画卡顿掉帧很严重？</span>
+                        <div class="pTitleS">配置较低的用户可以在「常规设置」里开启「减弱动态效果」。其中需用户注意起始页卡顿与浏览器有很大的关系，可使用谷歌、Edge、火狐等软件且开启浏览器硬件加速功能！随着版本更新起始页会逐渐优化流畅度的。</div>
+                    </div>
+                    <div class="feedbackItem"><span class="titleBold">为什么无法把起始页设置成浏览器主页？</span>
+                        <div class="pTitleS">大概率是杀毒软件或电脑中其他软件造成的主页劫持。可以查看杀毒软件中的浏览器设置里是不是把浏览器主页锁定成别的了？如是流氓软件、病毒导致的劫持可考虑下载火绒杀毒软件进行修复！</div>
+                    </div>
+					<div class="feedbackItem"><span class="titleBold">为什么我设置必应壁纸每次启动加载不出来？</span>
+                        <div class="pTitleS">因为使用的是官方的API原先使用的是解析过的API会更加兼容起始页，出现这个问题请再次点击一下必应壁纸重新设置一下即可显示！</div>
+                    </div>
+					<div class="feedbackItem"><span class="titleBold">为什么我设置壁纸或高级设置下一次打开又自动还原了？</span>
+                        <div class="pTitleS">为了保证用户的网络隐私安全，我们并没有设立云服务器进行协助用户设置，相对之下我们利用用户本地Cookie缓存进行保存用户已设定的设置，所以如果出现上述问题请不要清理浏览器“垃圾”，也不要开启无痕模式浏览使用本起始页。</div>
+                    </div>
+                </div>
+            </div>
+			<div class="popUp" id="popDonate">
+                <span class="btnClose" onclick="closePop(popDonate)"><span class="btnCloseInner"></span></span>
+                <div class="pTitle">捐助我</div>
+                <div class="pContent" id="contentDonate">
+                    <p class="pAbout">本站为个人爱好开发,若想赞助请扫描下方二维码！【支付宝】</p>
+                    <img class="imgQRC" id="imgAllInOne" 
+						 src="assets/images/zhifubao.ico">
+                </div>
+            </div>
+			<div class="popUp" id="popaac">
+                <span class="btnClose" onclick="closePop(popaac)"><span class="btnCloseInner"></span></span>
+                <div class="pTitle">法律信息</div>
+                <div class="pContent" id="contentaac">
+                    <p class="pAbout">关于本站工作室专门编写了一个协议，本协议为我们的最低底线！<br>一切侵犯我们权力以及抄袭炒作诽谤我们的作品的人一律走法律程序处理<br>在这一方面我们零容忍！
+                    </p>
+                    <div class="feedbackItem"><span class="titleBold">【服务器访问用户最终协议】</span>
+                        <div class="pTitleS">1. 我们开放我们的源码供大家学习参考，不允许进行原封不动进行抄袭，更不可以以我们的名义进行运营（如QQ群、服务器、网页等）。<br>2. 本站不存在去抄袭照扒的行为，本页面源码出自GitHub在原代码的基础上进行改良修复在原基础上进行学习创新（不包括beta2.0、beta1.0这两个版本为我们的原创），本站的一切logo内容均为原创（壁纸除外），不与如青柠起始页等起始页相同代码出现抄袭等情况！                    
+						</div>
+                  </div>
+            </div>
+            
+            <div class="popUp" id="popWelcome">
+                <span class="btnClose" onclick="closePop(popWelcome)"><span class="btnCloseInner"></span></span>
+                <div class="pTitle centerAligned">焕然一新</div>
+                <div id="welcomeTip">起始页现在有了新的名字 - 九洲起始页</div>
+                <div class="updateListBox">
+                    <span class="updateListIcon"><i class="iconfont iconUpdateList">&#xeb93;</i></span>
+                    <span class="updateListTitle">你想要的强大便笺，现已准备就绪。</span>
+                    <span class="updateListDetail">完全云端同步 / 固定多条便笺 / 全面适配手机</span>
+                </div>
+                <div class="updateListBox">
+                    <span class="updateListIcon"><i class="iconfont iconUpdateList">&#xe866;</i></span>
+                    <span class="updateListTitle">深色主题，暗下来也悦目。</span>
+                    <span class="updateListDetail">起始页现将根据您操作系统的主题设置自动切换为精心设计的深色主题。可在常规设置中关闭。</span>
+                </div>
+                <div class="updateListBox">
+                    <span class="updateListIcon"><i class="iconfont iconUpdateList">&#xeb94;</i></span>
+                    <span class="updateListTitle">随心自定义。</span>
+                    <span class="updateListDetail">常规设置中现有更多设置项目可用，你可以根据自己的喜好定制起始页的行为。</span>
+                </div>
+                <button class="btnRectangle" onclick="closePop(popWelcome)">Hello World</button>
+            </div>
+        </div>
+        <div id="wip">
+            <div class="wipTip" style="margin-top: 300px;font-size: 50px;">马上就好</div>
+            <div class="wipTip" style="margin-top: 30px;font-size: small;color: rgba(255,255,255,0.5)">我们正在为九洲起始页添加新的功能
+            </div>
+            <div class="wipTip">稍后再回来看看吧</div>
+        </div>
+        <div id="tp-weather-widget"></div>
+    </div>
+    <div class="topNotificationBar" id="topNotificationBar">
+        <span class="btnCloseS" id="btnClosetopNBar"></span>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
+    <script src="js/waves.min.js"></script>
+    <script src="js/main.js"></script>
+</div>
+</body>
+
+</html>
