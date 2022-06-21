@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>视频 - 网页起始页</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/mend.css">
+    <link rel="stylesheet" href="assets/css/mdui.min.css">
+    <!-- JS -->
+    <script src="assets/js/mdui.min.js"></script>
+    <script src="assets/js/script.js"></script>
+</head>
+<body class="mdui-theme-primary-indigo mdui-theme-accent-indigo mdui-appbar-with-toolbar">
+
+<!-- 感谢你能看到这段文字，我想说如果你想要共享这个文件请先查看 https://github.com/CPlayer-CN/Web-Start-Page#知识共享协议 -->
+
+<!-- 导航栏 -->
+<nav class="mdui-toolbar mdui-color-theme mdui-appbar-fixed">
+    <span class="mdui-btn mdui-btn-icon mdui-ripple mdui-ripple-white" mdui-drawer="{target: '#drawer', swipe: true}"><i class="mdui-icon material-icons">menu</i></span>
+    <a href="https://github.com/CPlayer-CN/Web-Start-Page" class="discolor mdui-typo-title">SAKURA作品区</a>
+</nav>
+
+<div class="mdui-drawer mdui-drawer-close" id="drawer">
+    <form id="search-form" action="https://cn.bing.com/search?" method="GET">
+        <div class="mdui-textfield">
+            <input name="q" type="text" class="mdui-textfield-input" placeholder="搜索">
+        </div>
+    </form>
+    <div class="mdui-list" mdui-collapse="{accordion: true}">
+        <div class="mdui-collapse-item">
+            <a mdui-drawer="{target: '#drawer'}" href="index.html" class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+                <i class="mdui-list-item-icon mdui-icon material-icons">homes</i>
+                <div class="mdui-list-item-content">首页</div>
+            </a>
+        </div>
+        <div class="mdui-collapse-item mdui-collapse-item-open">
+            <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+                <i class="mdui-list-item-icon mdui-icon material-icons">widgets</i>
+                <div class="mdui-list-item-content">分类</div>
+                <i class="mdui-collapse-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
+            </div>
+            <div class="mdui-collapse-item-body mdui-list">
+                <a mdui-drawer="{target: '#drawer'}" href="shop.html" class="mdui-list-item mdui-ripple">电商</a>
+                <a mdui-drawer="{target: '#drawer'}" href="video.html" class="mdui-list-item mdui-ripple">视频</a>
+                <a mdui-drawer="{target: '#drawer'}" href="music.html" class="mdui-list-item mdui-ripple">音乐</a>
+				<a mdui-drawer="{target: '#drawer'}" href="server.html" class="mdui-list-item mdui-ripple">服务器</a>
+                <a mdui-drawer="{target: '#drawer'}" href="wwcc.html" class="mdui-list-item mdui-ripple mdui-list-item-active">我们的作品</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 主体 -->
+<div id="sites" class="mdui-container">
+
+    <!-- SAKURA七日杀服务器 -->
+    <div class="box mdui-col-xs-3 mdui-col-sm-2 mdui-col-md-1" title="SAKURA七日杀服务器">
+        <a rel="nofollow noopener" href="服务器/7daystodie/index.html">
+        <p><img class="icon" src="assets/image/服务器.ico" title="SAKURA七日杀服务器"></p>
+        <p class="url">SAKURA七日杀服务器</p></a>
+    </div>
+	
+  <div class="box mdui-col-xs-3 mdui-col-sm-2 mdui-col-md-1" title="Beta1.0初代起始页">
+        <a rel="nofollow noopener" href="../oldwww/index.html">
+        <p><img class="icon" src="assets/image/服务器.ico" title="Beta1.0初代起始页"></p>
+        <p class="url">Beta1.0初代起始页</p></a>
+    </div>
+	
+	<div class="box mdui-col-xs-3 mdui-col-sm-2 mdui-col-md-1" title="Beta2.0概念起始页">
+      <a rel="nofollow noopener" href="../beta2.0/index.html">
+        <p><img class="icon" src="assets/image/服务器.ico" title="Beta2.0概念起始页"></p>
+        <p class="url">Beta2.0概念起始页</p></a>
+    </div>
+	
+	<div class="box mdui-col-xs-3 mdui-col-sm-2 mdui-col-md-1" title="Beta2.9正式测试版起始页">
+        <a rel="nofollow noopener" href="../index.html">
+        <p><img class="icon" src="../assets/images/favicon.ico" title="Beta2.9正式测试版起始页"></p>
+        <p class="url">Beta2.9正式测试版起始页</p>
+        </a>
+    </div>
+    
+
+</div>
+
+</body>
+</html>
